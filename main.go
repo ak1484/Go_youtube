@@ -4,7 +4,7 @@ import (
 	"fmt"
 	// "os"
 	// "strconv"
-)
+) 
 func main() {
 	fmt.Println("Arrays")
 	//Arrays
@@ -16,4 +16,6 @@ func main() {
 	for i:=0;i<len(arrr);i++{
 		fmt.Printf("%d\n",arrr[i])
 	}
+	arr2d:=[2][3]int{{1,2,3},{4,5,6}}
+	fmt.Println(arr2d)
 }
