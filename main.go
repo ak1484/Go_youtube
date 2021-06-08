@@ -7,10 +7,15 @@ import (
 	// "strconv"
 )
 func main() {
-	num1:=8
-	num2:=4
-	ans1:=num1/num2
-	num3:=8.2
-	ans2:=num3*float64(ans1)
-	fmt.Printf("%f",ans2)
+	fmt.Println("Conditions & Boolean Expressions")
+	//<,>,>=,<=,!=,== are all condition
+	x:=5
+	y:=6.4
+	ans:=float64(x)!=y
+	fmt.Printf("%t",ans)
+	a:="tim"
+	b:="tim"
+	c:="Tim"
+	fmt.Printf(" %t",a==b)
+	fmt.Printf(" %t",a==c)
 }
