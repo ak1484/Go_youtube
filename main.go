@@ -1,16 +1,16 @@
 package main
 
 import (
-	"bufio"
+	// "bufio"
 	"fmt"
-	"os"
-	"strconv"
+	// "os"
+	// "strconv"
 )
 func main() {
-	scanner:=bufio.NewScanner(os.Stdin)
-	fmt.Printf("Type the year you were born: ")
-	scanner.Scan()
-	input,_:= strconv.ParseInt(scanner.Text(),10,64)
-	//if you input a string then the input is 0 
-	fmt.Printf("You will be %d years old at the end of the year",2021-input)
+	num1:=8
+	num2:=4
+	ans1:=num1/num2
+	num3:=8.2
+	ans2:=num3*float64(ans1)
+	fmt.Printf("%f",ans2)
 }
