@@ -6,23 +6,14 @@ import (
 	// "strconv"
 )
 func main() {
-	fmt.Println("Switch Statement")
-	//switch statement
-    ans:=10
-	for i:=1;i<ans;i++{
-		rem:=ans%i
-		switch rem{
-		case 1:{
-           fmt.Printf("%d",rem)
-		}
-	    case 2:{
-		   fmt.Printf("%d",rem)
-	    }
-	    default:{
-			fmt.Printf("%d",rem)
-		}
-		}
-		fmt.Printf("\n")
+	fmt.Println("Arrays")
+	//Arrays
+    var arr [3]int
+	//default 0 is initilized
+	arr[0]=100
+	fmt.Println(arr)
+	arrr:=[5]int{2,4,5,8,9}
+	for i:=0;i<len(arrr);i++{
+		fmt.Printf("%d\n",arrr[i])
 	}
-	
 }
