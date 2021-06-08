@@ -6,14 +6,15 @@ import (
 	// "strconv"
 )
 func main() {
-	fmt.Println("If, Else If, Else ")
-	//for if else condition
-	age:=14
-	if age>=18{
-		fmt.Printf("You can drive")
-	}else if age>=14{
-		fmt.Printf("You can drive but with your parents")
-	}else{
-		println("you can not drive")
+	fmt.Println("For Loops & While Loops")
+	//for loops and while loop
+	// x:=0
+	// for x<5{
+    //   fmt.Println(x)
+	//   x++
+	// }
+	for x:=0;x<9;x+=2{
+		fmt.Println(x)
 	}
+	//break up to the end and continue up to the for loop
 }
