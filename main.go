@@ -6,17 +6,20 @@ import (
 	// "strconv"
 ) 
 func main() {
-	fmt.Println("Range & Slice/Array Examples")
-	//Range & Slice/Array Examples
-	s:=[]int{1,2,3,5,6,5,3}
-	// for i:=0;i<len(s);i++{
-	// 	fmt.Println(s[i])
-	// }
-	for i,ele:=range s{
-		for _,ele2:=range s[i+1:]{
-			if ele2==ele{
-				fmt.Println(ele)
-			}
-		}
+	fmt.Println("Maps")
+	//Maps
+	var mp map[string]int=map[string]int{
+		"apple":5,
+		"pear":7,
+		"orange":9,
 	}
+	
+	fmt.Println(mp)
+	for key,value:=range mp{
+		fmt.Println(key,"",value)
+	}
+	delete(mp,"apple")
+	fmt.Println("\n",mp)
+	val,ok:=mp["apple"]
+	fmt.Println(val,ok)
 }
