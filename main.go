@@ -6,16 +6,18 @@ import (
 	// "strconv"
 ) 
 func main() {
-	fmt.Println("Arrays")
-	//Arrays
-    var arr [3]int
-	//default 0 is initilized
-	arr[0]=100
-	fmt.Println(arr)
-	arrr:=[5]int{2,4,5,8,9}
-	for i:=0;i<len(arrr);i++{
-		fmt.Printf("%d\n",arrr[i])
-	}
-	arr2d:=[2][3]int{{1,2,3},{4,5,6}}
-	fmt.Println(arr2d)
+	fmt.Println("Slices")
+	//Slices
+    // var arr[5]int=[5]int{1,2,3,5,6}
+	// var S[]int=arr[1:3]
+	// fmt.Println(S)
+	// fmt.Println(cap(S))
+	// fmt.Println(S[0:1])
+	// var s []int=[]int{1,2,3,5,7}
+	// fmt.Println(cap(s))
+	// x:=append(s,10)
+	// fmt.Println(x)
+	a:=make([]int,5)
+	fmt.Println(a)
+	fmt.Printf("%T",a)
 }
