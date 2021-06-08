@@ -5,21 +5,16 @@ import (
 	// "os"
 	// "strconv"
 ) 
+func test(x,y int)(z1 int,z2 int){
+	defer fmt.Println("clean up the extra memory use")
+	z1=x+y
+	z2=y-x
+	fmt.Println("start")
+	return 
+}
 func main() {
-	fmt.Println("Maps")
-	//Maps
-	var mp map[string]int=map[string]int{
-		"apple":5,
-		"pear":7,
-		"orange":9,
-	}
-	
-	fmt.Println(mp)
-	for key,value:=range mp{
-		fmt.Println(key,"",value)
-	}
-	delete(mp,"apple")
-	fmt.Println("\n",mp)
-	val,ok:=mp["apple"]
-	fmt.Println(val,ok)
+	fmt.Println("Functions")
+	//Functions
+	add,sub:=test(4,9)
+	fmt.Println("Sum:",add,sub)
 }
