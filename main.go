@@ -5,33 +5,24 @@ import (
 	// "os"
 	// "strconv"
 ) 
-type Point struct{
-	x int
-	y int
-	// z bool
+type Student struct{
+	name string
+	grades []int
+	age int
+	
 }
-type Circle struct{
-	radius float64
-	// center *Point
-	*Point
+func (s Student) GAG()float64{
+	sum:=0
+	for _,v:=range s.grades{
+		sum+=v
+	}
+	return float64(sum)/float64(len(s.grades))
 }
-
 func main() {
-	fmt.Println("Structs and Custom Types")
-	//Structs and Custom Types
-	// var x Point=Point{1,2}
-	// X:=Point{1,4}
-	// fmt.Println(x)
-	// fmt.Println(X)
-	// x:=&Point{y:5}
-	// y:=&x
-	// fmt.Println(*y)
-	// fmt.Println(x)
-    // x.x=7
-	// fmt.Println(*x)
-	// p1:=&Point{2,4}
-	// c1:=Circle{3.5,p1}
-	c1:=Circle{3.5,&Point{2,9}}
-	// fmt.Println(c1.Point)
-	fmt.Println(c1.x)
+	fmt.Println("Struct Methods")
+	// Struct Methods
+    s1:=Student{"ankit",[]int{76,85,69},19}
+	val:=s1.GAG()
+	fmt.Println(val)
+
 }
