@@ -4,34 +4,34 @@ import (
 	"fmt"
 	// "os"
 	// "strconv"
-)
+) 
+type Point struct{
+	x int
+	y int
+	// z bool
+}
+type Circle struct{
+	radius float64
+	// center *Point
+	*Point
+}
 
-// func strchange(str *string){
-// 	*str="changed"
-// }
-// func str1change(str1 string){
-// 	str1="changed"
-// }
 func main() {
-	fmt.Println("Pointers & Derefrence Operator (& and *)")
-	//Pointers & Derefrence Operator (& and *)
-	// x:=8
-	// fmt.Println(&x)
-	// x:=7
-	// y:=&x
-	// fmt.Println(x,y)
-	// *y=9
+	fmt.Println("Structs and Custom Types")
+	//Structs and Custom Types
+	// var x Point=Point{1,2}
+	// X:=Point{1,4}
 	// fmt.Println(x)
-	// x:="no change"
-	// y:="no change"
-	// strchange(&x)
-	// str1change(y)
-	// fmt.Println(x)
-	// fmt.Println(y)
-    // x:=9
+	// fmt.Println(X)
+	// x:=&Point{y:5}
 	// y:=&x
-	// fmt.Println(y)
-	x:="no change"
-	var y *string=&x
-	fmt.Println(&y,"",y,"",*y)
+	// fmt.Println(*y)
+	// fmt.Println(x)
+    // x.x=7
+	// fmt.Println(*x)
+	// p1:=&Point{2,4}
+	// c1:=Circle{3.5,p1}
+	c1:=Circle{3.5,&Point{2,9}}
+	// fmt.Println(c1.Point)
+	fmt.Println(c1.x)
 }
