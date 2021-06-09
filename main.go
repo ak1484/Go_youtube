@@ -2,27 +2,34 @@ package main
 
 import (
 	"fmt"
+	"math"
 	// "os"
 	// "strconv"
 ) 
-type Student struct{
-	name string
-	grades []int
-	age int
-	
+type Rect struct{
+	l float64
+	w float64
 }
-func (s Student) GAG()float64{
-	sum:=0
-	for _,v:=range s.grades{
-		sum+=v
-	}
-	return float64(sum)/float64(len(s.grades))
+type Circle struct{
+	r float64
+}
+func (r Rect)Area()float64{
+	return r.l*r.w
+}
+func (c Circle)Area()float64{
+	return math.Pi*c.r*c.r
+}
+type shape interface{
+	Area()float64
 }
 func main() {
-	fmt.Println("Struct Methods")
-	// Struct Methods
-    s1:=Student{"ankit",[]int{76,85,69},19}
-	val:=s1.GAG()
-	fmt.Println(val)
-
+	fmt.Println("Interfaces")
+	//Interfaces
+    r:=Rect{3,4}
+	c:=Circle{3}
+    s:=[]shape{r,c}
+	for _,shape:=range s{
+		fmt.Println(shape.Area())
+	}
+	fmt.Println(r.Area())
 }
